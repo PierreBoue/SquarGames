@@ -42,7 +42,7 @@ CREATE TABLE boards
     game_id INT(10) NOT NULL,
     FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
 );
--- creation gameplay
+-- creation players
 DROP TABLE IF EXISTS square_games.players;
 CREATE TABLE square_games.players
 (   id INTEGER(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
