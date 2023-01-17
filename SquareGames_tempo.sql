@@ -33,6 +33,14 @@ VALUES
     (12,400,2),
     (10,350,3);
 
+-- creation gameplay
+DROP TABLE IF EXISTS square_games.players;
+CREATE TABLE square_games.players
+(   id INTEGER(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_id INTEGER(10),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
 
 
 
