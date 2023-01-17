@@ -27,11 +27,13 @@ VALUES
     ('toto','mdp','totoegalzero','1912-12-12');
 
 -- Initialisation table boards
-INSERT INTO square_games.boards (size,display_size)
+INSERT INTO square_games.boards (size,display_size,game_id)
 VALUES
     (3,300,1),
     (12,400,2),
     (10,350,3);
+
+
 
 
 
