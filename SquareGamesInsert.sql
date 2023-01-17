@@ -15,6 +15,6 @@ VALUES ('TicTacToe', 18, 99, 18, 99), ('Gomoku', 18, 99, 18, 99 ), ('Echecs', 18
 -- Initialisation table boards
 INSERT INTO square_games.boards (size,display_size)
 VALUES
-    (3,300),
-    (12,400),
-    (10,350);
+    (3,300,1),
+    (12,400,2),
+    (10,350,3);
