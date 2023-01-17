@@ -19,6 +19,6 @@ VALUES
     (12,400,2),
     (10,350,3);
 -- INSERT PLAYERS
-INSERT INTO square_games.players( user_id ) VALUES (1),(2);
+INSERT INTO square_games.players( user_id ) VALUES (2),(3);
 -- INSERT GAMEPLAY
 INSERT INTO square_games.gameplay( player_1, player_2,  board_id) VALUES ( 1, 2, 1 );

@@ -45,7 +45,23 @@ CREATE TABLE boards
 -- creation players
 DROP TABLE IF EXISTS square_games.players;
 CREATE TABLE square_games.players
-(   id INTEGER(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+(
+    id INTEGER(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     user_id INTEGER(10),
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+-- creation Move
+DROP TABLE IF EXISTS moves;
+CREATE TABLE moves
+(
+    id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    date DATETIME DEFAULT NOW(),
+    col INT(2) NOT NULL,
+    line INT(2) NOT NULL,
+    gameplay_id INT(10),
+    piece_id INT(10),
+    player_id INT(10),
+    FOREIGN KEY ( gameplay_id ) REFERENCES gameplay(id),
+    FOREIGN KEY ( piece_id ) REFERENCES pieces(id),
+    FOREIGN KEY ( player_id ) REFERENCES players(id)
 );
