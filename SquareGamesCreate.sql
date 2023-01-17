@@ -14,25 +14,25 @@ CREATE TABLE square_games.users
     coins_balance     int DEFAULT 0
 );
 -- creation pieces
-DROP TABLE IF EXISTS pieces;
-CREATE TABLE pieces (
-    id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    pattern INT(3) NOT NULL,
-    picture VARCHAR(255),
-    color VARCHAR(6) DEFAULT '000000');
+DROP TABLE IF EXISTS square_games.pieces;
+CREATE TABLE square_games.pieces (
+                                     id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+                                     pattern INT(3) NOT NULL,
+                                     picture VARCHAR(255),
+                                     color VARCHAR(6) DEFAULT '000000');
 -- creation games
-DROP TABLE IF EXISTS games;
-CREATE TABLE games (
-    id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    name VARCHAR(32) NOT NULL ,
-    age_mini_authorization INT(3) NOT NULL,
-    age_maxi_authorization INT(3) NOT NULL,
-    age_mini_against_human INT(3) NOT NULL,
-    age_maxi_against_human INT(3) NOT NULL
+DROP TABLE IF EXISTS square_games.games;
+CREATE TABLE square_games.games (
+                                    id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+                                    name VARCHAR(32) NOT NULL ,
+                                    age_mini_authorization INT(3) NOT NULL,
+                                    age_maxi_authorization INT(3) NOT NULL,
+                                    age_mini_against_human INT(3) NOT NULL,
+                                    age_maxi_against_human INT(3) NOT NULL
 );
 -- creation boards
-DROP TABLE IF EXISTS boards;
-CREATE TABLE boards
+DROP TABLE IF EXISTS square_games.boards;
+CREATE TABLE square_games.boards
 (
     id INTEGER(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     size INT(2),
@@ -64,8 +64,8 @@ CREATE TABLE square_games.gameplay
 );
 
 -- creation Move
-DROP TABLE IF EXISTS moves;
-CREATE TABLE moves
+DROP TABLE IF EXISTS square_games.moves;
+CREATE TABLE square_games.moves
 (
     id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     date DATETIME DEFAULT NOW(),
