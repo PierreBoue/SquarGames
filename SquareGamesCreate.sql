@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS square_games;
--- Création table users
+-- Création table  users
 DROP TABLE IF EXISTS square_games.users;
 CREATE TABLE square_games.users
 (
