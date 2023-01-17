@@ -26,4 +26,12 @@ VALUES
     ('boué','mdp','piero','1967-05-14'),
     ('toto','mdp','totoegalzero','1912-12-12');
 
+-- Initialisation table boards
+INSERT INTO square_games.boards (size,display_size,dark_color,board_color)
+VALUES
+    (3,300,'0000000','FFFFFF'),
+    (12,400,'000000','FFFFFF'),
+    (10,350,'000000','FFFFFF');
+
+
 
