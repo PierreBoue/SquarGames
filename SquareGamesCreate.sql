@@ -39,6 +39,13 @@ CREATE TABLE boards
     display_size INT(4),
     dark_color CHAR(6) DEFAULT '333333',
     light_color CHAR(6) DEFAULT 'DDDDDD',
-    game_id INT(10),
+    game_id INT(10) NOT NULL,
     FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
+);
+-- creation gameplay
+DROP TABLE IF EXISTS square_games.players;
+CREATE TABLE square_games.players
+(   id INTEGER(12) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    user_id INTEGER(10),
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 );
