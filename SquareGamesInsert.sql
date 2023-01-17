@@ -1,3 +1,4 @@
+
 -- Initialisation table users
 INSERT INTO square_games.users (login, password, pseudo)
 VALUES
