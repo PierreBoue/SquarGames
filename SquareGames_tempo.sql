@@ -23,7 +23,7 @@ VALUES
 INSERT INTO square_games.users (login, password, pseudo, birthdate)
 VALUES
     ('chevrier','mdp','betov','1967-08-22'),
-    ('boué','mdp','toto','1967-05-14'),
+    ('boué','mdp','piero','1967-05-14'),
     ('toto','mdp','totoegalzero','1912-12-12');
 
 
