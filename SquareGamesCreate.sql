@@ -21,19 +21,6 @@ CREATE TABLE square_games.pieces (
     pattern INT(3) NOT NULL,
     picture VARCHAR(255),
     color VARCHAR(6) DEFAULT '000000');
--- creation games
-DROP TABLE IF EXISTS square_games.games;
-CREATE TABLE square_games.games (
-    id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    name VARCHAR(32) NOT NULL ,
-    age_mini_authorization INT(3) NOT NULL,
-    age_maxi_authorization INT(3) NOT NULL,
-    age_mini_against_human INT(3) NOT NULL,
-    age_maxi_against_human INT(3) NOT NULL,
-    default_board_id INT(10),
-    FOREIGN KEY ( default_board_id ) REFERENCES boards(id) ON DELETE CASCADE
-
-);
 -- creation boards
 DROP TABLE IF EXISTS square_games.boards;
 CREATE TABLE square_games.boards
@@ -45,6 +32,19 @@ CREATE TABLE square_games.boards
     light_color CHAR(6) DEFAULT 'DDDDDD',
     game_id INT(10) NOT NULL,
     FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
+);
+-- creation games
+DROP TABLE IF EXISTS square_games.games;
+CREATE TABLE square_games.games (
+                                    id INTEGER(10) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+                                    name VARCHAR(32) NOT NULL ,
+                                    age_mini_authorization INT(3) NOT NULL,
+                                    age_maxi_authorization INT(3) NOT NULL,
+                                    age_mini_against_human INT(3) NOT NULL,
+                                    age_maxi_against_human INT(3) NOT NULL,
+                                    default_board_id INT(10),
+                                    FOREIGN KEY ( default_board_id ) REFERENCES boards(id) ON DELETE CASCADE
+
 );
 -- creation players
 DROP TABLE IF EXISTS square_games.players;
