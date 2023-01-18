@@ -30,8 +30,8 @@ CREATE TABLE square_games.boards
     display_size INT(4),
     dark_color CHAR(6) DEFAULT '333333',
     light_color CHAR(6) DEFAULT 'DDDDDD',
-    game_id INT(10) NOT NULL,
-    FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
+    game_id INT(10) NOT NULL
+    -- ,FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE
 );
 -- creation games
 DROP TABLE IF EXISTS square_games.games;
@@ -46,6 +46,7 @@ CREATE TABLE square_games.games (
                                     FOREIGN KEY ( default_board_id ) REFERENCES boards(id) ON DELETE CASCADE
 
 );
+ALTER TABLE square_games.boards ADD CONSTRAINT FOREIGN KEY (game_id) REFERENCES games(id) ON DELETE CASCADE;
 -- creation players
 DROP TABLE IF EXISTS square_games.players;
 CREATE TABLE square_games.players
