@@ -22,7 +22,7 @@ VALUES
 INSERT INTO square_games.players( user_id ) VALUES (2),(3);
 
 -- INSERT GAMEPLAY
-INSERT INTO square_games.gameplay( player_1, player_2,  board_id) VALUES ( 1, 2, 1 );
+INSERT INTO square_games.gameplay( player1_id, player2_id,  boards_id) VALUES ( 1, 2, 1 );
 
 -- INSERT MOVES
 
