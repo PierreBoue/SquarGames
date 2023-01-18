@@ -20,5 +20,10 @@ VALUES
     (10,350,3);
 -- INSERT PLAYERS
 INSERT INTO square_games.players( user_id ) VALUES (2),(3);
+
 -- INSERT GAMEPLAY
 INSERT INTO square_games.gameplay( player_1, player_2,  board_id) VALUES ( 1, 2, 1 );
+
+-- INSERT MOVES
+
+INSERT INTO square_games.moves( col, line, gameplay_id, piece_id , player_id ) VALUES ( 1, 1, 1, 1),(0,1,2,2);
